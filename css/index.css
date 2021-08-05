@@ -103,11 +103,7 @@ main{
     margin-left: 5px;
     opacity: .6;
 }
-@media screen and (max-width: 900px){
-    #launcher-section{
-        width: 100%;
-    }
-}
+
 ul.dropdown-content.select-dropdown li span {
     color: var(--blue); /* no need for !important :) */
 }
@@ -152,4 +148,17 @@ ul.dropdown-content.select-dropdown li span {
     background-image: linear-gradient(
         90deg
         ,#2565B5 0%,#2565B5 100%)!important;
+}
+@media screen and (max-width: 900px){
+    #launcher-section{
+        width: 100%;
+    }
+
+    #main-menu-logo img{
+        max-width: 80vw !important;
+        max-height: var(--main-nav-height);
+    }
+    [branches-list]{
+        max-width: 100%;
+    }
 }
