@@ -12,3 +12,10 @@ Alteratively, you can visit https://alomosystem.com/abbank-branches/
 NOTE: if you have not installed Xampp on your machine, please do so. 
 
 You can download the latest version here https://www.apachefriends.org/download.html
+
+*TODO
+
+- add PHP and Database functionality for dynamic updates
+- Add google maps navigation links (Branch)
+- add branch search functionality
+- Add location based internal search 
