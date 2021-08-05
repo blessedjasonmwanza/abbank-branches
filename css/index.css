@@ -2,6 +2,11 @@
     --text-gray: #666;
     --main-nav-height: 65px;
     --border-gray-dark: #ccc;
+    --blue:#1976D2;
+}
+*:not(.fa){
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    /* font-size: 13px; */
 }
 nav{
     display: flex;
@@ -13,6 +18,7 @@ nav{
     overflow: hidden;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
     background: #fff !important;
+    z-index: 999;
 }
 #main-menu-logo img{
     max-height: 64px;
@@ -53,13 +59,57 @@ main{
     margin-bottom: 5px;
     border-radius: 3px;
 }
+.branch_profile_logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    float: left;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 #0000000f, 0 2px 10px 0 #0000000f;
+}
+.branch_profile_logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    float: left;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 #0000000f, 0 2px 10px 0 #0000000f;
+}
+.branch_hours {
+    clear: both;
+    text-align: left;
+    font-size: 80%;
+    font-weight: normal;
+    padding-top: 5px;
+}
+.branch_name {
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--blue);
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+.branch_city {
+    font-weight: normal;
+    display: inline;
+    margin-left: 5px;
+    opacity: .6;
+}
 @media screen and (max-width: 900px){
     #launcher-section{
         width: 100%;
     }
 }
 ul.dropdown-content.select-dropdown li span {
-    color: #1976D2; /* no need for !important :) */
+    color: var(--blue); /* no need for !important :) */
 }
 [nowrap]{word-wrap: none; white-space: nowrap;}
 [overflow-x]{overflow-x: auto;}
