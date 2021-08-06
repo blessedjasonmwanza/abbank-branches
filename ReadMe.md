@@ -7,7 +7,7 @@ C:\xampp\htdocs
 //Linux
 /root/opt/lampp/htdocs
 
-Alteratively, you can visit https://alomosystem.com/abbank-branches/
+Alternatively, you can visit https://alomosystem.com/abbank-branches/
 
 NOTE: if you have not installed Xampp on your machine, please do so. 
 
