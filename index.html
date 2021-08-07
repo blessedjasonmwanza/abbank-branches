@@ -20,7 +20,7 @@
    <link  rel="stylesheet"  href="css/jquery.convform.min.css">
    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"  as="style" onload="this.onload=null;this.rel='stylesheet'"/>
    <style>
-       div.conv-form-wrapper div.wrapper-messages{height: 130px;}
+       div.conv-form-wrapper div.wrapper-messages{height: 200px;}
     /* STARTUP LOADER */
     .lds-roller {
     display: inline-block;
@@ -161,14 +161,14 @@
             <section full-width active-chat>
                 <div id="chat"  class="conv-form-wrapper">
                     <form action="" method="GET" class="hidden"  onsubmit="this.preventDefault();">
-                        <select multi[] data-conv-question="Hello! I am your <b>AI Assistant</b>. Please choose what you need help with" name="service-choice" multiple>
-                            <option value="open-account">Open Account</option>
-                            <option value="nearby_branches">branches</option>
+                        <select name="service" data-conv-question="Hello! I am your <b>AI Assistant</b>. Please choose what you need help with" >
+                            <option value="Account Opening">Open Account</option>
+                            <option value="Branches">branches</option>
                             <option value="etumba">e-tumba</option>
                             <option value="loans">Get a Loans</option>
                             
                         </select>
-                        <input type="text" data-conv-question="Thanks! I am currently still being worked on. I will be able to provide you with tailored assistance and self services soon." data-no-answer="true">
+                        <input type="text" data-conv-question="Thanks! I am currently still being worked on. I will be able to provide you with tailored assistance and self services including information on <b> {service} </b> soon." data-no-answer="true">
                     </form>
                 </div>
             </section>
