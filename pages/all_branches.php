@@ -55,7 +55,7 @@ try {
                             </div>
                             <div style="margin-top: 3px" class="branch_hours">Mon - Fri <small><b>08 : 00hrs</b> - <b>14 : 00hrs</b> </small> Weekends <small><b>08 : 00hrs</b> - <b>14 : 00hrs</b> </small>
                                 <div style="margin-top: 3px; margin-bottom: 3px; color: #ccc; font-weight: bold;">
-                                    <a href="'.$google_map_link.'" style="color: #47525dcc;">Get directions</a>
+                                    <a href="'.$google_map_link.'" style="color: #47525dcc;" target="_blank">Get directions</a>
                                 </div>
                             </div>
                         </div>
