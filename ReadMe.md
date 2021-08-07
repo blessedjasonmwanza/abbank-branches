@@ -19,3 +19,5 @@ You can download the latest version here https://www.apachefriends.org/download.
 - Add google maps navigation links (Branch)
 - add branch search functionality
 - Add location based internal search 
+- Add a chatbot 
+- Add Navigation buttons (or best use hash URL for better UX)
