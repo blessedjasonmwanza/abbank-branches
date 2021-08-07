@@ -12,7 +12,7 @@ try {
 }
 ?>
 <span flex full-with center j-center class="card-panel darken-2 white-text" style="margin-top: 0px;" bg-blue>
-    <h4 class="white-text" grey>Our Branches</h4>
+    <h4 class="white-text" grey>Branches in <b> <?php echo $city; ?></b> city</h4>
 </span>
 <div full-width>
     <section branches-list style="margin: auto;">
@@ -75,7 +75,7 @@ try {
                     ';
                 });
                 if($no_branches){
-                    echo 'Sorry, it seems like we have not yet listed our branches in this area.';
+                    echo '<span full-with center grey>Sorry, it seems like we have not yet listed our branches in this area.</span>';
                 }
             ?>
         </div>

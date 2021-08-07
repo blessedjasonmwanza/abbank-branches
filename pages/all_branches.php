@@ -63,7 +63,7 @@ try {
                     ';
                 });
                 if($no_branches){
-                    echo 'Sorry, it seems like we have not yet listed our branches in this area.';
+                    echo '<span full-with center grey>Sorry, it seems like we have not yet listed our branches in this area.</span>';
                 }
             ?>
         </div>
