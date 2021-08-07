@@ -2,6 +2,11 @@
 try {
     include '../config/medoo2.1.php';
     include '../config/db.php';
+    if(isset($_GET['city'])){
+        $city = $_GET['city'];
+    }else{
+        exit('Invalid City');
+    }
 } catch (\Throwable $th) {
     exit('sorry, something went wrong');
 }
@@ -21,7 +26,14 @@ try {
         <div id="branch_display_section">
             <?php
                 $no_branches = true;
-                $db->select('branches', '*', function(&$results){
+                $db->select('branches', '*', [
+                    "OR" => [
+                        "branch_name[~]" => "%$city%",
+                        "city[~]" => "%$city%",
+                        "area[~]" => "%$city%",
+                        "full_address[~]" => "%$city%",
+                    ]
+                ], function(&$results){
                     global $no_branches;
                     $no_branches = false;
                     $branch_id = $results['id'];
@@ -74,8 +86,8 @@ try {
     $('[search_branch_form]').off().submit(function(e){
         e.preventDefault();
         let display_section = $('#branch_display_section');
-        let keyword = $('[search_term]').val();
-        $.post('search/branches.php', {"keyword": keyword}, function(response){
+        let city = $('[search_term]').val();
+        $.post('search/branches.php', {"city": city}, function(response){
             display_section.html(response);
             activate_call_icon();
         }).fail((error) =>{

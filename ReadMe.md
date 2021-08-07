@@ -15,9 +15,10 @@ You can download the latest version here https://www.apachefriends.org/download.
 
 *TODO
 
-- add PHP and Database functionality for dynamic updates
-- Add google maps navigation links (Branch)
-- add branch search functionality
-- Add location based internal search 
+- add PHP and Database functionality for dynamic updates (done - )
+- Add google maps navigation links (Branch) (done)
+- add branch search functionality (done)
+- Add location based internal search (done)
 - Add a chatbot 
 - Add Navigation buttons (or best use hash URL for better UX)
+- 

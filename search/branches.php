@@ -12,12 +12,12 @@ try {
 }
     $no_branches = true;
     $db->select('branches', '*', [
-        "OR" => [
-            "branch_name[~]" => "%$keyword%",
-            "city[~]" => "%$keyword%",
-            "area[~]" => "%$keyword%",
-            "full_address[~]" => "%$keyword%",
-        ]
+            "OR" => [
+                "branch_name[~]" => "%$keyword%",
+                "city[~]" => "%$keyword%",
+                "area[~]" => "%$keyword%",
+                "full_address[~]" => "%$keyword%",
+            ]
         ], function(&$results){
         global $no_branches;
         $no_branches = false;

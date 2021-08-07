@@ -15,20 +15,20 @@
   }
   try {
       // LIVE DB
-    // $database =  new Medoo([
+    // $db =  new Medoo([
     //   // [required]
     //   'type' => 'mysql',
     //   'host' => 'localhost',
-    //   'database' => '',
-    //   'username' => '',
-    //   'password' => ''
+    //   'database' => 'alomosystem_abbank',
+    //   'username' => 'alomosystem_abbank',
+    //   'password' => '@AbBank-Branches',
     // ]);
     // TEST DB
     $db =  new Medoo([
       // [required]
       'type' => 'mysql',
       'host' => 'localhost',
-      'database' => 'abbank',
+      'database' => 'alomosystem_abbank',
       'username' => 'root',
       'password' => '',
     ]);

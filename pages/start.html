@@ -12,8 +12,8 @@
 </span>
 <section id="launcher-section" class="animate__animated animate__zoomIn animate__slower">
     
-    <div class="input-field col s12">
-        <select name="" id="">
+    <form class="input-field col s12" find_by_city_form>
+        <select name="" id="selected_city" required>
             <option value="">Chose your city</option>
             <option value="Lusaka">Lusaka</option>
             <option value="Ndola">Ndola</option>
@@ -29,8 +29,9 @@
             <option value="Solwezi">Solwezi</option>
         </select>
         <center>
-            <button class="btn btn-sm blue" style="margin: 30px 0px;" onclick="toast('<b>Coming soon  &nbsp; </b> <span> &nbsp; Feature is under improvements</span>');" >Search</button>
+            <button class="btn btn-sm blue" style="margin: 30px 0px;" >Search</button>
         </center>
+    </form>
         <div class="col s12" full-width flex j-center>
             <div  fit-content c-pointer onclick="toast('<b>Coming soon &nbsp; </b> <span> &nbsp; Feature is under improvements</span>');">
                 <svg style="width:24px;height:24px;vertical-align: middle;" viewBox="0 0 24 24">
@@ -39,3 +40,11 @@
             </div>
         </div>
 </section>
+<script>
+    $('[find_by_city_form]').submit(function(e) {
+        e.preventDefault();
+        let city = $('#selected_city').val();
+        console.log(city);
+        open_page('view_by_city.php?city='+city);
+    });
+</script>
