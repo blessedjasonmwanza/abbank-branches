@@ -265,4 +265,16 @@ ul.dropdown-content.select-dropdown li span {
     [branches-list]{
         max-width: 100%;
     }
+    [chatbot-area], [active-chat]{
+        width: 99%;
+        max-width: 100%;
+        height: 515px;
+    }
+    [chatbot-area] [chart-header]{
+        width: 100%;
+        z-index: 999;
+    }
+    [active-chat] {
+        height: 472px;
+    }
 }
