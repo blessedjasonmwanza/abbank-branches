@@ -17,7 +17,10 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    <link rel="stylesheet" href="css/index.css">
    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"  as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+   <link  rel="stylesheet"  href="css/jquery.convform.min.css">
+   <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"  as="style" onload="this.onload=null;this.rel='stylesheet'"/>
    <style>
+       div.conv-form-wrapper div.wrapper-messages{height: 130px;}
     /* STARTUP LOADER */
     .lds-roller {
     display: inline-block;
@@ -147,14 +150,47 @@
     <main>
         
     </main>
+    <aside chatbot-area >
+        <div style="position: relative; width: 100%; margin-top: -2px;">
+            <span chart-header in-flex full-width row space-between v-center>
+                <span chatbot-logo>
+                    <img src="img/AB-Bank-Favicon.png">
+                </span>
+                <span>AB Bank <small>AI Assistant</small></span>
+            </span>
+            <section full-width active-chat>
+                <div id="chat"  class="conv-form-wrapper">
+                    <form action="" method="GET" class="hidden"  onsubmit="this.preventDefault();">
+                        <select multi[] data-conv-question="Hello! I am your <b>AI Assistant</b>. Please choose what you need help with" name="service-choice" multiple>
+                            <option value="open-account">Open Account</option>
+                            <option value="nearby_branches">branches</option>
+                            <option value="etumba">Tell Me about Etumba</option>
+                            <option value="loans">Get a Loans</option>
+                            
+                        </select>
+                        <input type="text" data-conv-question="Thanks! I am currently still being worked on. I will be able to provide you with tailored assistance and self services soon." data-no-answer="true">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </aside>
+    <aside bot-trigger c-pointer style="display: none;">
+        <i class="fa fa-comments fa-2x" white></i>
+    </aside>
     <footer>
         <!-- JS FILES -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
          <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="js/autosize.min.js"  async></script>
+        <script src="js/covform.js" ></script>
+        <script src="js/bot-control.js" defer></script>
         <script>
             $(function(){
                 open_page("start.html");
+                $('[bot-trigger]').click(() =>{
+                    $('[chatbot-area]').toggle('slow');
+                });
             });
             function init(){
                 // initializes / refreshes functions 
